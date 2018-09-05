@@ -1,6 +1,84 @@
-  <div class="row">
-    <div class="col-md-8">
-      <img class="img-responsive" src="./assets/nature.jpg" alt="Chania">
+<div class="bg">
+    <div class="row ">
+      <div class="col-md-8"></div>
+      <div class="col-md-3">
+          <div class="top-buffer"></div>
+          <mat-card class="card">
+              <mat-card-header>
+                <mat-card-title>
+                  <h4>
+                    Inicia sesión
+                  </h4>
+                </mat-card-title>
+              </mat-card-header>
+              <mat-card-content>
+                <mat-divider></mat-divider>
+                <br>
+                <form class="example-form">
+                  <table class="full-width"
+                          cellspacing="0">
+                    <tr>
+                      <td>
+                        <mat-form-field class="full-width">
+                          <input matInput 
+                                  placeholder="Nombre de usuario" 
+                                  [formControl]="loginFormControl" 
+                                  name="username" 
+                                  required>
+                        </mat-form-field>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <mat-form-field class="full-width">
+                          <input matInput 
+                                  placeholder="Contraseña"
+                                  [formControl]="loginFormControl" 
+                                  type="password"
+                                  name="password"
+                                  required>
+                        </mat-form-field>
+                      </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button mat-button
+                                    class="pull-right"
+                                    color="primary">
+                              ¿Olvidaste tu contraseña?
+                            </button>
+                        </td>
+                      </tr>
+                  </table>
+                </form>
+                <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+              </mat-card-content>
+              <mat-card-actions>
+
+              <mat-grid-list cols="1" rowHeight="8:1">
+                <mat-grid-tile>
+                    <button id="btnLogin" 
+                            mat-raised-button
+                            (click)="login()"
+                            color="primary">
+                      Ingresar
+                    </button>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                  <mat-divider></mat-divider>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                  <button mat-button
+                          color="accent">
+                    Crear una cuenta
+                  </button>
+                </mat-grid-tile>
+                <br>
+              </mat-grid-list>
+              </mat-card-actions>
+            </mat-card>   
+          <div class="bottom-buffer"></div>
+      </div>
+      <div class="col-md-1"></div>
     </div>
-    <div class="col-md-4">.col-md-4</div>
   </div>

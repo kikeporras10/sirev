@@ -1,25 +1,35 @@
 <!doctype html>
 <html lang="es">
-<head>
-  <meta charset="utf-8">
-  <title>Sirev</title>
-  <base href="/">
+  <head>
+    <meta charset="utf-8">
+    <title>Sirev</title>
+    <base href="/">
 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link href="https://framework-gb.cdn.gob.mx/assets/styles/main.css" rel="stylesheet">
-</head>
-<body>
-  <!-- Contenido -->
-  <main class="page">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://framework-gb.cdn.gob.mx/assets/styles/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-inverse sub-navbar navbar-fixed-top">
       <div class="container">
-        <div class="top-buffer"></div>
-          <app-root></app-root>
-          <div class="bottom-buffer"></div>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#subenlaces">
+            <span class="sr-only">Interruptor de Navegación</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">PROFEPA</a>
+        </div>
       </div>
+    </nav>
+    <!-- Contenido -->
+    <main class="page">
+      <app-root></app-root>
     </main>
-    <!-- JS -->
+      <!-- JS -->
     <script src="https://framework-gb.cdn.gob.mx/gobmx.js"></script>
-</body>
+  </body>
 </html>

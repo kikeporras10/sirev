@@ -2,20 +2,26 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { MatCardModule , MatButtonModule } from '@angular/material';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+// Animations
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+// Material
+import { MaterialModule } from './material.module';
+
 import { LoginComponent } from './login/login.component';
-
-
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
-    MatCardModule,
-    MatButtonModule
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
