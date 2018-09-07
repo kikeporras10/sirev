@@ -8,6 +8,7 @@ import {ErrorStateMatcher} from '@angular/material/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  loading = false;
 
   loginFormControl = new FormControl('', [
     Validators.required
@@ -16,6 +17,14 @@ export class LoginComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  login() {
+    
+  }
+
+  logout() {
+    
   }
 
   matcher = new MyErrorStateMatcher();

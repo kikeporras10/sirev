@@ -7,7 +7,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { routing } from './app.routing';
+import { routing } from './app-routing.module';
 
 // Animations
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
@@ -18,6 +18,9 @@ import { MaterialModule } from './material';
 import { AuthGuard } from './_guards/auth-guard.guard';
 import { ErrorInterceptor } from './_helpers/error.interceptor';
 import { JwtInterceptor } from './_helpers/jwt.interceptor';
+
+import { UserService } from './_services/user.service';
+import { AlertService } from './_services/alert.service';
 
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
@@ -43,6 +46,8 @@ import { RegisterComponent } from './register/register.component';
   ],
   providers: [
     AuthGuard,
+    UserService,
+    AlertService,
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
   ],
