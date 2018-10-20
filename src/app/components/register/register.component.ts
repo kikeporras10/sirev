@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NavigationEnd } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
  
-import { AlertService } from '.././_services/alert.service';
-import { UserService } from '.././_services/user.service';
+import { AlertService } from '../../_services/alert.service';
+import { UserService } from '../../_services/user.service';
  
 @Component({templateUrl: 'register.component.html'})
 export class RegisterComponent implements OnInit {
@@ -19,6 +20,13 @@ export class RegisterComponent implements OnInit {
         private alertService: AlertService) { }
  
     ngOnInit() {
+        this.router.events.subscribe((evt) => {
+            if (!(evt instanceof NavigationEnd)) {
+                return;
+            }
+            window.scrollTo(0, 0)
+        });
+
         this.registerForm = this.formBuilder.group({
             firstName: ['', Validators.required],
             lastName: ['', Validators.required],

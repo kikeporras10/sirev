@@ -22,9 +22,10 @@ import { JwtInterceptor } from './_helpers/jwt.interceptor';
 import { UserService } from './_services/user.service';
 import { AlertService } from './_services/alert.service';
 
-import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './home/home.component';
-import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './components/login/login.component';
+import { HomeComponent } from './components/home/home.component';
+import { RegisterComponent } from './components/register/register.component';
+import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { RegisterComponent } from './register/register.component';
     LoginComponent,
     HomeComponent,
     RegisterComponent,
+    ResetPasswordComponent,
   ],
   imports: [
     BrowserModule,
